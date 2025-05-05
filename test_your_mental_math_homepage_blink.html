@@ -171,7 +171,7 @@
                 return;
             }
 
-            fetch(`http://127.0.0.1:5000/api/puzzles`)
+            fetch(`https://math-puzzle-site.onrender.com/api/puzzles`)
                 .then(res => res.json())
                 .then(allPuzzles => {
                     const match = allPuzzles.find(p =>
@@ -186,7 +186,7 @@
         }
 
         function loadPuzzleById(id) {
-            fetch(`http://127.0.0.1:5000/api/puzzles/${id}`)
+            fetch(`https://math-puzzle-site.onrender.com/api/puzzles/${id}`)
                 .then(res => res.json())
                 .then(data => {
                     solution = data.grid || {};
